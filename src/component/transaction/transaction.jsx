@@ -8,6 +8,9 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { PiPizza, PiGift } from "react-icons/pi"; // Import icons for Food and Entertainment
 import { BsSuitcase2 } from "react-icons/bs"; // Import icon for Travel
 import ExpenseBarChart from "../bar chart/BarChart";
+import { IoMdCloseCircleOutline } from "react-icons/io";
+import { MdOutlineModeEdit } from "react-icons/md";
+
 const ITEMS_PER_PAGE = 3;
 
 export default function Transaction({
@@ -149,7 +152,7 @@ export default function Transaction({
                                 </div>
                                 <div className="lipdivright">
                                     <p>₹{item.price}</p>
-                                    <CancelRoundedIcon
+                                    <IoMdCloseCircleOutline
                                         className="iconsright"
                                         onClick={() => handleDeleteExpense(startIndex + index)}
                                     />
@@ -157,7 +160,7 @@ export default function Transaction({
                                         className="iconsright2"
                                         onClick={() => handleEditButtonClick(startIndex + index)}
                                     >
-                                        <ModeEditOutlineRoundedIcon className="iconsright2" />
+                                        <MdOutlineModeEdit className="iconsright2" />
                                     </button>
                                     {editModalStates[startIndex + index] && (
                                         <Editmodal
