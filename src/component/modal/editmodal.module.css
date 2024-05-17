@@ -93,7 +93,9 @@
     background-color: rgb(237, 237, 237);
     display: flex;
     flex-direction: column;
-    padding-top: 15px;
+    padding-top: 16px;
+    right: 570px;
+    position: absolute;
   }
   .expenseform {
     display: flex;
